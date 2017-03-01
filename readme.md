@@ -1,4 +1,4 @@
-# Laravel 5.3 - Domain Driven Design
+# Laravel 5.4 - Domain Driven Design
 
 Default Laravel application for DDD architecture with AdminLTE 2
 

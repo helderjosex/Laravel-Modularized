@@ -164,15 +164,10 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-        * Acacha AdminLTE template provider
-         */
-        //Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
-
-        /*
          * Package Service Providers...
          */
 
-        //
+        Laravel\Dusk\DuskServiceProvider::class,
 
         /*
          * Application Service Providers...

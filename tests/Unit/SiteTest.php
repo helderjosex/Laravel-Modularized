@@ -42,6 +42,35 @@ class SiteTest extends DuskTestCase
 
     }
 
+
+    /**
+     * Test Register Page.
+     *
+     * @return void
+     */
+    public function testRegisterPage()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/register')
+                ->assertSee('Cadastrar um novo usuário');
+        });
+
+    }
+
+    /**
+     * Test Password reset Page.
+     *
+     * @return void
+     */
+    public function testPasswordResetPage()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/password/reset')
+                ->assertSee('Redefinir sua senha');
+        });
+
+    }
+
     /**
      * Test Landing Page.
      *
@@ -61,5 +90,6 @@ class SiteTest extends DuskTestCase
                     ->assertSeeLink($user->name);
         });
     }
+
 
 }

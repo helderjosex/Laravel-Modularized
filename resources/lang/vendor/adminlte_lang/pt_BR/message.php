@@ -30,7 +30,7 @@ return [
     'signFacebook'            => 'Registre-se via Facebook',
     'signTwitter'             => 'Registre-se via Twitter',
     'signGoogle+'             => 'Registre-se via Google+',
-    'sendpassword'            => 'Enviar o link de redefinição de senha',
+    'sendpassword'            => 'Enviar link',
     'passwordreset'           => 'Redefinir sua senha',
     'pagenotfound'            => 'Página não encontrada',
     '404error'                => 'Página com erro 404',

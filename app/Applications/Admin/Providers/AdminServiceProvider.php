@@ -15,7 +15,7 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->registerRoutes($this->app['router']);
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'admin');
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'adminlte_lang');
+        $this->loadTranslationsFrom('', 'adminlte_lang');
     }
 
     protected function registerRoutes(Router $router)

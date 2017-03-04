@@ -8,6 +8,7 @@ use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Hash;
 use App\Domains\Users\User;
 
 class SiteTest extends DuskTestCase
@@ -28,21 +29,6 @@ class SiteTest extends DuskTestCase
     }
 
     /**
-     * Test Landing Page.
-     *
-     * @return void
-     */
-    public function testLandingPageWithUserLogged()
-    {
-        $this->browse(function (Browser $browser) {
-            $user = factory(User::class)->create();
-            $this->actingAs($user);
-            $browser->visit('/')
-                    ->assertSee('Laravel');
-        });
-    }
-
-    /**
      * Test Login Page.
      *
      * @return void
@@ -55,4 +41,25 @@ class SiteTest extends DuskTestCase
         });
 
     }
+
+    /**
+     * Test Landing Page.
+     *
+     * @return void
+     */
+    public function testLandingPageWithUserLogged()
+    {
+        $this->browse(function (Browser $browser) {
+            $user = factory(User::class)->create([
+                'password' => Hash::make('passw0RD'),
+            ]);
+            $browser->visit('/login')
+                    ->type('email', $user->email)
+                    ->type('password', 'passw0RD')
+                    ->press('Entrar')
+                    ->visit('/')
+                    ->assertSeeLink($user->name);
+        });
+    }
+
 }

@@ -14,5 +14,5 @@ use Illuminate\Http\Request;
 */
 
 // Home Routes...
-Route::get('/', ['as' => 'painel', 'uses' => 'HomeController@index']);
+Route::get('/', ['as' => 'dashboard', 'uses' => 'HomeController@index']);
 

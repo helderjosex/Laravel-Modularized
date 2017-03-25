@@ -23,7 +23,7 @@ class AdminServiceProvider extends ServiceProvider
         $options = [
             'namespace' => $this->namespace,
             'middleware' => ['web', 'auth'],
-            'prefix' => 'painel',
+            'prefix' => 'dashboard',
             'as' => 'admin.',
         ];
 

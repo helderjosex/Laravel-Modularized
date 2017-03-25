@@ -5,7 +5,7 @@
         @if (Route::has('login'))
             <div class="top-right links">
                 @if (Auth::check())
-                    <a href="{{ url('/painel') }}">{{ Auth::user()->name }}</a>
+                    <a href="{{ url('/dashboard') }}">{{ Auth::user()->name }}</a>
                 @else
                     <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>

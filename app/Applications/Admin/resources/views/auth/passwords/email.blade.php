@@ -11,7 +11,7 @@
 
         <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/painel') }}"><b>Admin</b>LTE</a>
+            <a href="{{ url('/dashboard') }}"><b>Admin</b>LTE</a>
         </div><!-- /.login-logo -->
 
         @if (session('status'))

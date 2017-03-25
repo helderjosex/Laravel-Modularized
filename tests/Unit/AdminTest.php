@@ -120,7 +120,7 @@
 //     */
 //    public function testHomePageForUnauthenticatedUsers()
 //    {
-//        $this->visit('/painel')
+//        $this->visit('/dashboard')
 //            ->seePageIs('/login');
 //    }
 //
@@ -134,7 +134,7 @@
 //        $user = factory(App\Domains\Users\User::class)->create();
 //
 //        $this->actingAs($user)
-//            ->visit('/painel')
+//            ->visit('/dashboard')
 //            ->see($user->name);
 //    }
 //
@@ -147,10 +147,10 @@
 //    {
 //        $user = factory(App\Domains\Users\User::class)->create();
 //
-//        $form = $this->actingAs($user)->visit('/painel')->getForm('logout');
+//        $form = $this->actingAs($user)->visit('/dashboard')->getForm('logout');
 //
 //        $this->actingAs($user)
-//            ->visit('/painel')
+//            ->visit('/dashboard')
 //            ->makeRequestUsingForm($form)
 //            ->seePageIs('/');
 //    }
